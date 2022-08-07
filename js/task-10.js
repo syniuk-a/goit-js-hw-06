@@ -27,7 +27,7 @@ function createBoxes(amount) {
   let width = 30;
   let heigth = 30;
   // генерируем див
-  for (let i = 0; i < amount + 1; i += 1) {
+  for (let i = 0; i < amount; i += 1) {
     // записываем в память новый див
     const newColorDiv = document.createElement('div');
     // присваеваем класс
@@ -48,4 +48,11 @@ function createBoxes(amount) {
 refec.buttonCreate.addEventListener('click', (event) => {
   const amount = Number(refec.inputControl.value);
   createBoxes(amount);
+});
+// удаляем дивы
+function destroyBoxes() {
+  refec.boxColor.innerHTML = '';
+};
+refec.buttonDestroy.addEventListener('click', () => {
+  destroyBoxes();
 });
