@@ -43,3 +43,9 @@ function createBoxes(amount) {
     refec.boxColor.append(newColorDiv);
   };
 };
+
+// добавляев новые дивы по колличеству при наэатии кнопки Create
+refec.buttonCreate.addEventListener('click', (event) => {
+  const amount = Number(refec.inputControl.value);
+  createBoxes(amount);
+});
